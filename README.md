@@ -177,7 +177,7 @@ A través de esta comparación, se selecciona el modelo con mejor desempeño par
 
 
 
-También se puede utilizar **validación cruzada** para evaluar los modelos y optimizar la selección de hiperparámetros. Este proceso se realiza empleando la librería **scikit-learn** (sklearn) en el entorno de Databricks.
+También se puede utilizar **validación cruzada** para evaluar los modelos y optimizar la selección de hiperparámetros. Este proceso se realiza empleando la librería **scikit-learn** en el entorno de Databricks.
 
 Una vez finalizada la optimización, se procede a comparar las métricas de desempeño entre los modelos entrenados. Las métricas consideradas incluyen, entre otras:
 
