@@ -51,11 +51,11 @@ De acuerdo con la definición del problema, el modelo se entrena exclusivamente 
 
 # Fuentes de Datos
 
-Para el desarrollo del modelo de predicción, se contemplan dos fuentes principales de información, bajo los siguientes supuestos:
+Para el desarrollo del modelo de predicción, se contemplan una fuente  de información, bajo los siguientes supuestos:
 
 ## 1. Información Histórica
 
-Se dispone de un archivo de texto plano (`.txt`) que contiene registros históricos de pacientes. Este archivo incluye los síntomas reportados y la categoría de enfermedad correspondiente. La información se actualiza de manera semanal a través de un proceso batch automatizado.
+Se dispone de un archivo de texto plano (`.txt`) que contiene registros históricos de pacientes. Este archivo incluye, información del paciente (id), síntomas reportados y la categoría de enfermedad correspondiente. La información se actualiza de manera semanal a través de un proceso batch automatizado.
 
 ## 2. Registro Actual de Pacientes
 
@@ -63,15 +63,7 @@ Los médicos utilizan una aplicación para registrar los datos clínicos de los 
 
 - **Formulario de triage**: Permite ingresar los síntomas actuales del paciente.
 - **Pronóstico automático**: Tras el registro de los síntomas, la aplicación genera una predicción sobre la categoría de enfermedad.
-- **Formulario de validación**: Permite a los profesionales de la salud registrar la clasificación real de la enfermedad, la cual sirve como etiqueta verdadera para evaluar y retroalimentar el modelo.
-
-## Consideraciones sobre las Variables
-
-
-
-
-
-
+- **Formulario de validación**: Permite a los profesionales de la salud registrar la clasificación real de la enfermedad, tiempo despues, la cual sirve como etiqueta verdadera para evaluar y retroalimentar el modelo. (como ya se cuenta con esta información para crear el modelo suponemos que este proceso ya lo realiza el cliente)
 
 
 # 2. Preprocesamiento de Datos
