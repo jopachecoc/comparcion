@@ -276,3 +276,7 @@ Si se detecta una desviación significativa (supera el umbral), se activará una
 - **CloudTrail:** Registra las acciones realizadas en la infraestructura, incluyendo qué usuario ejecutó funciones, los accesos realizados y a qué recursos se accedió.
 
 - **CloudWatch:** Monitorea el comportamiento de los distintos componentes del pipeline, como la latencia del API Gateway, uso de memoria en instancias EC2, y otros indicadores clave para asegurar la salud y rendimiento del sistema.
+
+- En paralelo, se integra un sistema de versionamiento de código mediante herramientas como GitHub, GitLab o Bitbucket, asegurando trazabilidad, control de cambios y colaboración eficiente durante el ciclo de vida del proyecto.
+
+  
