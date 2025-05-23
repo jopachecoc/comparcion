@@ -1,7 +1,7 @@
-#Reestructuración del pipeline.
+# Reestructuración del pipeline.
 
 Pipeline propuesto (MLOps) 
-#Presentado por: Jonathan Pacheco 
+# Presentado por: Jonathan Pacheco 
 
 
 
