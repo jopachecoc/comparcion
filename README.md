@@ -1,6 +1,7 @@
 # Reestructuración del pipeline.
 
-Pipeline propuesto (MLOps) 
+Pipeline propuesto (MLOps) (lo podras ver en la misma carpeta del repositorio con el nombre de pipelineV2.PNG)
+
 # Presentado por: Jonathan Pacheco 
 
 
