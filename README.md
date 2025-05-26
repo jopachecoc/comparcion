@@ -191,6 +191,14 @@ El modelo con el mejor ajuste y desempeño será seleccionado para su despliegue
 
 Posteriormente, se registra el modelo utilizando **MLflow**, guardando resultados, métricas, hiperparámetros y artefactos asociados. El modelo puede ser almacenado en formatos como MLflow o **ONNX** para facilitar su interoperabilidad.
 
+Utilizamos MLflow porque tiene una interfaz sencilla para registrar, versionar y almacenar modelos. Esto facilita:
+Comparar diferentes versiones del mismo modelo.
+Rastrear los cambios en los hiper parámetros, métricas y código asociados.
+Tener un historial completo del entrenamiento.
+También Mlflow es se integra de forma nativa con Databricks, facilitando el trabajo en equipos colaborativos.
+Por otro lado nos ofrece desplegar el modelo automáticamente como una API REST usando mlflow serve, por todo lo anterior escogimos Mlflow frente a otros servicios, aparte de ser una solución de código abierto.
+
+
 Finalmente, toda la solución se empaqueta en un contenedor **Docker**, garantizando la reproducibilidad y portabilidad en cualquier entorno de ejecución.
 
 
@@ -263,7 +271,7 @@ Para el registro y comparación de predicciones versus valores reales, se recomi
 
 También se evaluará periódicamente la correlación entre las variables independientes (X) y la variable dependiente (Y) durante la operación en producción. En caso de que alguna métrica supere un umbral predefinido, se generarán alertas automáticas.
 
-Los datos de monitoreo se almacenarán en un bucket de **Amazon S3**, donde posteriormente serán evaluados mediante **Amazon CloudWatch** para verificar el cumplimiento de los umbrales establecidos.
+Los datos de monitoreo se almacenarán en un bucket de **Amazon S3**, donde posteriormente serán evaluados mediante **Amazon CloudWatch** para verificar el cumplimiento de los umbrales establecidos. (Se recomienda Amazon CloudWatch porque está profundamente integrado con todos los servicios de AWS y permite control total de la infraestructura desde un solo punto).
 
 Si se detecta una desviación significativa (supera el umbral), se activará una función **AWS Lambda** que disparará el workflow completo en Databricks, iniciando un nuevo ciclo de entrenamiento y actualización del modelo.
 
